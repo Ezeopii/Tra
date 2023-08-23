@@ -1,6 +1,6 @@
 using System;
 
-// Clase para el repartidor de drones
+// Clase de los drones
 public class RepartidorDrone
 {
     public void EntregarPedido(string pedido)
@@ -9,7 +9,7 @@ public class RepartidorDrone
     }
 }
 
-// Singleton para gestionar los repartidores de drones
+// Singleton para gestionar los drones repartidores
 public class GestorRepartidores
 {
     private static GestorRepartidores _instancia;
@@ -17,7 +17,7 @@ public class GestorRepartidores
 
     private GestorRepartidores()
     {
-        // Inicialización del repartidor de drones
+        
         _repartidorDrone = new RepartidorDrone();
     }
 
@@ -39,12 +39,12 @@ public class GestorRepartidores
     }
 }
 
-// Uso
+
 class Program
 {
     static void Main(string[] args)
     {
-        // Usar el gestor de repartidores para obtener el repartidor de drones
+        // Usar el gestor de repartidores para obtener a los drones
         var gestorRepartidores = GestorRepartidores.Instancia;
         var repartidorDrone = gestorRepartidores.ObtenerRepartidorDrone();
 
